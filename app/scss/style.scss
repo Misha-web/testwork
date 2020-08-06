@@ -1,0 +1,140 @@
+@import "vars";
+@import "libs";
+@import "fonts";
+@import "blocks/header";
+@import "blocks/intro";
+@import "blocks/about";
+@import "blocks/services";
+@import "blocks/features";
+@import "blocks/information";
+@import "blocks/gallery";
+@import "blocks/blogs";
+@import "blocks/contact";
+@import "blocks/footer";
+*:before,
+*:after,
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    font-family: 'M PLUS 1p', sans-serif;
+    &.lock {
+        overflow-y: hidden;
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.btn {
+    padding: 20px 60px;
+    background: #FFC700;
+    border-radius: 40px;
+    border: none;
+    outline: none;
+    font-family: 'M PLUS 1p', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: #333333;
+    cursor: pointer;
+}
+
+@media(min-width: 768px) {
+    .btn {
+        transition: .3s linear;
+        &:hover {
+            background: #d6a908;
+        }
+    }
+}
+
+.section {
+    padding: 100px 0px;
+}
+
+.title {
+    margin-bottom: 60px;
+    text-align: center;
+    color: #333333;
+    &__text {
+        font-weight: 800;
+        font-size: 36px;
+        line-height: 40px;
+    }
+    &__subtext {
+        line-height: 26px;
+        max-width: 900px;
+        margin: 30px auto 0px;
+    }
+    &--w {
+        color: #fff;
+    }
+}
+
+@media(max-width: 768px) {
+    .title {
+        margin-bottom: 40px;
+        &__text {
+            font-size: 32px;
+            line-height: 36px;
+            &--lil {
+                font-size: 24px;
+                line-height: 28px;
+            }
+        }
+        &__subtext {
+            font-size: 16px;
+            line-height: 24px;
+            margin: 20px auto 0px;
+        }
+    }
+
+    .btn {
+        padding: 18px 40px;
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+
+@media(max-width: 480px) {
+    .title {
+        margin-bottom: 20px;
+        &__text {
+            font-size: 24px;
+            line-height: 28px;
+        }
+        &__subtext {
+            font-size: 14px;
+            line-height: 22px;
+        }
+    }
+    .btn {
+        padding: 15px 48px;
+        font-size: 18px;
+        line-height: 22px;
+    }
+}

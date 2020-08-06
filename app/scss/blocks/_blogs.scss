@@ -1,0 +1,126 @@
+.blogs {
+    background: #333333;
+    &__list {
+        display: flex;
+        justify-content: center;
+        margin: 0 -15px -40px;
+    }
+
+    &__list-item {
+        padding: 0 15px 40px;
+        flex-basis: 33.33%;
+        list-style: none;
+    }
+
+    &__item-wrapper {
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    &__item-img {
+        position: relative;
+        overflow: hidden;
+        height: 0;
+        padding-bottom: calc(300 / 360 * 100%);
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__item-title {
+        margin-top: 30px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    &__item-text {
+        margin-top: 30px;
+        line-height: 26px;
+    }
+    &__btn {
+        display: block;
+        margin: 60px auto 0px;
+    }
+}
+
+@media(max-width: 990px) {
+    .blogs {
+        &__item-title {
+            margin-top: 20px;
+            font-size: 22px;
+            line-height: 24px;
+        }
+        &__item-text {
+            margin-top: 20px;
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+}
+
+@media(max-width: 840px) {
+    .blogs {
+        &.section {
+            padding: 70px 0px;
+        }
+        &__list {
+            flex-wrap: wrap;
+            margin: 0;
+        }
+        &__list-item {
+            padding: 0 0 40px;
+            flex-basis: 100%;
+            &:last-child {
+                padding: 0px;
+            }
+        }
+        &__item-wrapper {
+            max-width: 300px;
+        }
+        &__btn {
+            margin: 40px auto 0px;
+        }
+    }
+}
+
+@media(max-width: 480px) {
+    .blogs {
+        &.section {
+            padding: 40px 0px;
+        }
+        &__list-item {
+            padding: 0 0 20px;
+        }
+        &__item-wrapper {
+            max-width: 345px;
+        }
+        &__item-img {
+            padding-bottom: calc(345 / 345 * 100%);
+            &--lil {
+                padding-bottom: calc(300 / 360 * 100%);
+            }
+        }
+        &__item-title {
+            margin-top: 10px;
+            font-size: 18px;
+            line-height: 24px;
+        }
+        &__item-text {
+            margin-top: 10px;
+            font-size: 14px;
+            line-height: 22px;
+        }
+        &__btn {
+            margin: 20px auto 0px;
+        }
+    }
+}
+
